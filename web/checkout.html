@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="Improvável">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Finalize sua compra simulada na loja Improvável: dados pessoais, endereço e forma de pagamento.">
+  <meta property="og:title" content="Finalizar compra | Improvável">
+  <meta property="og:description" content="Finalize a compra simulada da sua invenção improvável.">
+  <title>Finalizar compra | Improvável</title>
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute z-3 bg-dark text-white p-2" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="sticky-top bg-primary border-bottom border-light border-opacity-25">
+    <nav class="navbar" data-bs-theme="dark" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html"><span class="logo-marca" aria-hidden="true">?!</span> Improvável</a>
+        <a class="btn btn-outline-light rounded-pill px-4" href="index.html">Continuar comprando</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <div id="checkoutConteudo" hidden>
+      <section class="hero-loja text-white py-5" aria-labelledby="titulo-checkout">
+        <div class="container">
+          <span class="badge rounded-pill selo px-3 py-2 mb-3">Finalização</span>
+          <h1 id="titulo-checkout" class="display-6 fw-bold">Dados para compra</h1>
+          <p class="lead mb-0">Este formulário é uma simulação e não processa pagamentos reais.</p>
+        </div>
+      </section>
+
+      <div class="container py-5">
+        <div class="row g-4 g-lg-5">
+          <section class="col-lg-8" aria-label="Formulário de compra">
+            <form id="checkoutForm" novalidate>
+              <fieldset class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <legend class="h5 fw-bold mb-3">Dados pessoais</legend>
+                <div class="row g-3">
+                <div class="col-md-7">
+                  <label for="nome" class="form-label fw-semibold">Nome completo</label>
+                  <input class="form-control" id="nome" name="nome" type="text" aria-describedby="erro-nome" autocomplete="name" required>
+                  <div class="feedback-erro small mt-1" id="erro-nome"></div>
+                </div>
+                <div class="col-md-5">
+                  <label for="telefone" class="form-label fw-semibold">Telefone <span class="text-secondary fw-normal">(opcional)</span></label>
+                  <input class="form-control" id="telefone" name="telefone" type="tel" aria-describedby="erro-telefone" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999">
+                  <div class="feedback-erro small mt-1" id="erro-telefone"></div>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label fw-semibold">E-mail</label>
+                  <input class="form-control" id="email" name="email" type="email" aria-describedby="erro-email" autocomplete="email" required>
+                  <div class="feedback-erro small mt-1" id="erro-email"></div>
+                </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <legend class="h5 fw-bold mb-1">Endereço de entrega</legend>
+                <p class="text-secondary small mb-3">Digite o CEP e use "Buscar CEP" para preencher o endereço automaticamente.</p>
+                <div class="row g-3">
+                <div class="col-md-5">
+                  <label for="cep" class="form-label fw-semibold">CEP</label>
+                  <div class="input-group">
+                    <input class="form-control" id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" aria-describedby="ajudaCep erro-cep" required>
+                    <button class="btn btn-primary" id="buscarCep" type="button">Buscar CEP</button>
+                  </div>
+                  <div id="ajudaCep" class="form-text">Digite 8 números. Ex.: 01001-000.</div>
+                  <div class="feedback-erro small mt-1" id="erro-cep"></div>
+                </div>
+                <div class="col-md-7">
+                  <label for="logradouro" class="form-label fw-semibold">Endereço</label>
+                  <input class="form-control" id="logradouro" name="logradouro" type="text" aria-describedby="erro-logradouro" autocomplete="address-line1" required>
+                  <div class="feedback-erro small mt-1" id="erro-logradouro"></div>
+                </div>
+                <div class="col-md-3">
+                  <label for="numero" class="form-label fw-semibold">Número</label>
+                  <input class="form-control" id="numero" name="numero" type="text" aria-describedby="erro-numero" required>
+                  <div class="feedback-erro small mt-1" id="erro-numero"></div>
+                </div>
+                <div class="col-md-9">
+                  <label for="complemento" class="form-label fw-semibold">Complemento <span class="text-secondary fw-normal">(opcional)</span></label>
+                  <input class="form-control" id="complemento" name="complemento" type="text" autocomplete="address-line2">
+                </div>
+                <div class="col-md-5">
+                  <label for="bairro" class="form-label fw-semibold">Bairro</label>
+                  <input class="form-control" id="bairro" name="bairro" type="text">
+                </div>
+                <div class="col-md-5">
+                  <label for="cidade" class="form-label fw-semibold">Cidade</label>
+                  <input class="form-control" id="cidade" name="cidade" type="text" aria-describedby="erro-cidade" autocomplete="address-level2" required>
+                  <div class="feedback-erro small mt-1" id="erro-cidade"></div>
+                </div>
+                <div class="col-md-2">
+                  <label for="estado" class="form-label fw-semibold">UF</label>
+                  <input class="form-control" id="estado" name="estado" type="text" aria-describedby="erro-estado" maxlength="2" autocomplete="address-level1" required>
+                  <div class="feedback-erro small mt-1" id="erro-estado"></div>
+                </div>
+                </div>
+                <div id="cepFeedback" class="mt-3" role="status" aria-live="polite"></div>
+              </fieldset>
+
+              <fieldset class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <legend class="h5 fw-bold mb-3">Pagamento</legend>
+                <label for="pagamento" class="form-label fw-semibold">Forma de pagamento</label>
+                <select class="form-select" id="pagamento" name="pagamento" aria-describedby="erro-pagamento" required>
+                  <option value="">Selecione...</option>
+                  <option value="pix">Pix</option>
+                  <option value="credito">Cartão de crédito</option>
+                  <option value="boleto">Boleto</option>
+                </select>
+                <div class="feedback-erro small mt-1" id="erro-pagamento"></div>
+              </fieldset>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" id="termos" name="termos" type="checkbox" aria-describedby="erro-termos" required>
+                <label class="form-check-label" for="termos">Confirmo que os dados preenchidos são apenas para esta simulação educacional.</label>
+                <div class="feedback-erro small mt-1" id="erro-termos"></div>
+              </div>
+
+              <button class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold" type="submit">Concluir compra simulada</button>
+              <div id="formFeedback" class="mt-3" role="status" aria-live="polite"></div>
+            </form>
+          </section>
+
+          <aside class="col-lg-4" aria-labelledby="titulo-resumo">
+            <div class="card border-0 shadow rounded-4 overflow-hidden">
+              <div class="bg-primary-subtle px-4 py-3"><h2 id="titulo-resumo" class="h5 fw-bold mb-0">Resumo do pedido</h2></div>
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between"><span id="resumoProduto"></span></div>
+                <div class="d-flex justify-content-between mt-2"><span>Subtotal</span><span id="resumoSubtotal"></span></div>
+                <div class="d-flex justify-content-between mt-2"><span>Frete</span><span id="resumoFrete"></span></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center fw-bold"><span>Total</span><span id="resumoTotal" class="price price-large"></span></div>
+                <p id="resumoDica" class="small text-secondary mt-3 mb-0"></p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <section id="checkoutErro" class="container py-5 text-center" hidden aria-labelledby="titulo-vazio">
+      <p class="display-1" aria-hidden="true">🛒</p>
+      <h1 id="titulo-vazio" class="h2 fw-bold">Seu pedido está vazio</h1>
+      <p class="text-secondary">Escolha uma invenção na vitrine antes de finalizar a compra.</p>
+      <a class="btn btn-primary rounded-pill px-4" href="index.html">Ver produtos</a>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4 mt-5">
+    <div class="container">
+      <p class="mb-0 small">Improvável · Projeto educacional. Nenhuma cobrança real é realizada.</p>
+    </div>
+  </footer>
+
+  <script defer src="js/produtos.js"></script>
+  <script defer src="js/checkout.js"></script>
+</body>
+</html>

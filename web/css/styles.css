@@ -1,0 +1,136 @@
+/* ==========================================================
+   Improvável — identidade visual
+   Bootstrap 5.3 como base; aqui ficam a paleta (variáveis),
+   a tipografia e os componentes que o framework não cobre.
+   ========================================================== */
+
+:root {
+  /* Paleta da loja */
+  --cor-primaria: #1b1340;        /* roxo-noite: cabeçalho, botões, títulos */
+  --cor-primaria-rgb: 27, 19, 64;
+  --cor-primaria-hover: #2d2266;
+  --cor-destaque: #ffb703;        /* âmbar: selos e chamadas */
+  --cor-fundo: #faf7f2;
+  --cor-texto: #241d3d;
+  --cor-suave: #5d5675;           /* texto secundário (contraste AA sobre o fundo) */
+  --cor-borda: #e4ddd0;
+  --cor-foco: #5b3df5;
+  --cor-erro: #b02a37;
+  --cor-sucesso: #146c43;
+
+  /* Padrões de forma e sombra */
+  --raio: 1rem;
+  --sombra: 0 8px 24px rgba(27, 19, 64, 0.12);
+
+  /* Ligação com as variáveis do Bootstrap */
+  --bs-primary: var(--cor-primaria);
+  --bs-primary-rgb: var(--cor-primaria-rgb);
+  --bs-body-bg: var(--cor-fundo);
+  --bs-body-color: var(--cor-texto);
+  --bs-secondary-color: var(--cor-suave);
+  --bs-border-color: var(--cor-borda);
+  --bs-link-color: var(--cor-primaria);
+  --bs-link-hover-color: var(--cor-primaria-hover);
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em;
+}
+
+/* Foco visível em tudo que é interativo */
+:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+/* ---------- Botões ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--cor-primaria);
+  --bs-btn-border-color: var(--cor-primaria);
+  --bs-btn-hover-bg: var(--cor-primaria-hover);
+  --bs-btn-hover-border-color: var(--cor-primaria-hover);
+  --bs-btn-active-bg: var(--cor-primaria-hover);
+  --bs-btn-active-border-color: var(--cor-primaria-hover);
+  --bs-btn-disabled-bg: var(--cor-suave);
+  --bs-btn-disabled-border-color: var(--cor-suave);
+}
+
+.btn {
+  min-height: 2.75rem; /* área de toque confortável no celular */
+}
+
+/* ---------- Cabeçalho e hero ---------- */
+.logo-marca {
+  color: var(--cor-destaque);
+}
+
+.hero-loja {
+  background: linear-gradient(135deg, var(--cor-primaria) 0%, #3b2a8f 100%);
+}
+
+.selo {
+  background: var(--cor-destaque);
+  color: var(--cor-primaria);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---------- Cartões de produto ---------- */
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra) !important;
+}
+
+.product-illustration {
+  display: grid;
+  place-items: center;
+  min-height: 170px;
+  font-size: 4.5rem;
+}
+
+.product-detail-illustration {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  font-size: 9rem;
+  border-radius: var(--raio);
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.price-large {
+  font-size: 2rem;
+}
+
+/* ---------- Formulários e feedback ---------- */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--cor-foco);
+  box-shadow: 0 0 0 0.2rem rgba(91, 61, 245, 0.2);
+}
+
+.feedback-erro { color: var(--cor-erro); font-weight: 600; }
+.feedback-sucesso { color: var(--cor-sucesso); font-weight: 600; }
+
+/* ---------- Rodapé ---------- */
+.site-footer {
+  background: var(--cor-primaria);
+  color: #d9d4ee;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card { transition: none; }
+  .product-card:hover,
+  .product-card:focus-within { transform: none; }
+}

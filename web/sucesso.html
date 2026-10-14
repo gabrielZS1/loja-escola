@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="Improvável">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Confirmação da compra simulada na loja Improvável.">
+  <meta property="og:title" content="Compra concluída | Improvável">
+  <meta property="og:description" content="Sua compra simulada na Improvável foi concluída.">
+  <title>Compra concluída | Improvável</title>
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute z-3 bg-dark text-white p-2" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="sticky-top bg-primary border-bottom border-light border-opacity-25">
+    <nav class="navbar" data-bs-theme="dark" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html"><span class="logo-marca" aria-hidden="true">?!</span> Improvável</a>
+        <a class="btn btn-outline-light rounded-pill px-4" href="index.html">Voltar à loja</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="container py-5">
+    <section id="sucessoConteudo" class="card border-0 shadow rounded-4 overflow-hidden col-md-10 col-lg-7 mx-auto" hidden aria-labelledby="titulo-sucesso">
+      <div class="bg-success-subtle py-5 text-center">
+        <div class="ratio ratio-1x1 w-25 mx-auto" aria-hidden="true">
+          <div class="d-flex align-items-center justify-content-center rounded-circle bg-success text-white display-3 shadow">✓</div>
+        </div>
+      </div>
+      <div class="card-body p-4 p-md-5">
+        <div class="text-center">
+          <span class="badge rounded-pill selo px-3 py-2 mb-3">Pedido simulado concluído</span>
+          <h1 id="titulo-sucesso" class="h2 fw-bold">Compra concluída com sucesso!</h1>
+          <p class="lead text-secondary" id="mensagemCliente"></p>
+        </div>
+        <dl class="mt-4 mb-4">
+          <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-normal text-secondary">Número do pedido</dt><dd class="mb-0 fw-bold" id="numeroPedido"></dd></div>
+          <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-normal text-secondary">Produto</dt><dd class="mb-0 " id="sucessoProduto"></dd></div>
+          <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-normal text-secondary">Subtotal</dt><dd class="mb-0 " id="sucessoSubtotal"></dd></div>
+          <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-normal text-secondary">Frete</dt><dd class="mb-0 " id="sucessoFrete"></dd></div>
+          <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-normal text-secondary">Pagamento</dt><dd class="mb-0 " id="sucessoPagamento"></dd></div>
+          <div class="d-flex justify-content-between py-2 border-bottom"><dt class="fw-normal text-secondary">Total</dt><dd class="mb-0 price" id="sucessoTotal"></dd></div>
+        </dl>
+        <div class="text-center">
+          <a class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold" href="index.html">Voltar para a loja</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sucessoErro" class="text-center py-5" hidden aria-labelledby="titulo-sem-compra">
+      <p class="display-1" aria-hidden="true">🔒</p>
+      <h1 id="titulo-sem-compra" class="h2 fw-bold">Nenhuma compra concluída</h1>
+      <p class="text-secondary">Esta página só aparece depois de finalizar um pedido.</p>
+      <a class="btn btn-primary rounded-pill px-4" href="index.html">Ir para a vitrine</a>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4 mt-5">
+    <div class="container">
+      <p class="mb-0 small">Improvável · Nenhuma cobrança real foi realizada.</p>
+    </div>
+  </footer>
+
+  <script defer src="js/produtos.js"></script>
+  <script defer src="js/success.js"></script>
+</body>
+</html>

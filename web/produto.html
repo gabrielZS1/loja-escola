@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="Improvável">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Detalhes de uma invenção da loja Improvável.">
+  <meta property="og:title" content="Detalhes do produto | Improvável">
+  <meta property="og:description" content="Conheça os detalhes de uma invenção da loja Improvável.">
+  <title>Detalhes do produto | Improvável</title>
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute z-3 bg-dark text-white p-2" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="sticky-top bg-primary border-bottom border-light border-opacity-25">
+    <nav class="navbar" data-bs-theme="dark" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html"><span class="logo-marca" aria-hidden="true">?!</span> Improvável</a>
+        <a class="btn btn-outline-light rounded-pill px-4" href="index.html">Produtos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <div id="produtoConteudo" hidden>
+      <div class="bg-white border-bottom py-3">
+        <div class="container">
+          <nav aria-label="Caminho de navegação">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a class="text-decoration-none" href="index.html">Produtos</a></li>
+              <li class="breadcrumb-item active" aria-current="page" id="breadcrumbNome"></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="container py-5">
+        <article class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-6">
+            <div id="produtoIlustracao" class="product-detail-illustration shadow-sm" role="img" aria-label=""></div>
+          </div>
+
+          <div class="col-lg-6">
+            <span id="produtoCategoria" class="badge rounded-pill text-bg-primary px-3 py-2 mb-3"></span>
+            <h1 id="produtoNome" class="display-5 fw-bold"></h1>
+            <p id="produtoCurta" class="lead text-secondary"></p>
+            <p id="produtoPreco" class="price price-large mb-2"></p>
+            <p class="mb-3" id="produtoRegras"></p>
+            <p id="produtoDescricao"></p>
+
+            <section aria-labelledby="titulo-detalhes" class="mb-4">
+              <h2 id="titulo-detalhes" class="h5 fw-bold">Detalhes</h2>
+              <ul id="produtoDetalhes" class="list-group list-group-flush rounded-4 shadow-sm overflow-hidden"></ul>
+            </section>
+
+            <section aria-labelledby="titulo-ficha" class="mb-4">
+              <h2 id="titulo-ficha" class="h5 fw-bold">Ficha técnica</h2>
+              <dl class="row mb-0">
+                <dt class="col-sm-4">Material</dt><dd class="col-sm-8" id="fichaMaterial"></dd>
+                <dt class="col-sm-4">Dimensões</dt><dd class="col-sm-8" id="fichaDimensoes"></dd>
+                <dt class="col-sm-4">Modo de uso</dt><dd class="col-sm-8" id="fichaUso"></dd>
+              </dl>
+            </section>
+
+            <form id="formProduto" novalidate>
+              <div class="row g-3 align-items-end">
+                <div class="col-5 col-sm-4">
+                  <label for="quantidade" class="form-label fw-semibold">Quantidade</label>
+                  <input class="form-control form-control-lg" id="quantidade" name="quantidade" type="number" min="1" max="10" value="1">
+                </div>
+                <div class="col-7 col-sm-8">
+                  <p class="small text-secondary mb-0">Total</p>
+                  <output id="totalProduto" for="quantidade" class="fs-4 fw-bold"></output>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold mt-3" type="submit">Comprar agora</button>
+            </form>
+            <div id="produtoFeedback" class="mt-3" role="status" aria-live="polite"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <section id="produtoErro" class="container py-5 text-center" hidden aria-labelledby="titulo-erro">
+      <p class="display-1" aria-hidden="true">🕳️</p>
+      <h1 id="titulo-erro" class="h2 fw-bold">Esse produto ainda é improvável demais</h1>
+      <p class="text-secondary">Não encontramos nenhuma invenção com esse código. Talvez ela ainda não tenha sido inventada.</p>
+      <a class="btn btn-primary rounded-pill px-4" href="index.html">Voltar para a vitrine</a>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4 mt-5">
+    <div class="container">
+      <p class="mb-0 small">Improvável · Projeto educacional. Nenhum produto desta loja existe de verdade.</p>
+    </div>
+  </footer>
+
+  <script defer src="js/produtos.js"></script>
+  <script defer src="js/product.js"></script>
+</body>
+</html>

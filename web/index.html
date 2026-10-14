@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="Improvável">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Improvável: a loja de invenções que ainda não existem. Veja produtos de bolso, espaciais, minúsculos e gigantes.">
+  <meta property="og:title" content="Improvável | Invenções que ainda não existem">
+  <meta property="og:description" content="Zumbilume, guarda-chuva pré-pingo, jardim flutuante e outras invenções improváveis.">
+  <title>Improvável | Invenções que ainda não existem</title>
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute z-3 bg-dark text-white p-2" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="sticky-top bg-primary border-bottom border-light border-opacity-25">
+    <nav class="navbar" data-bs-theme="dark" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html"><span class="logo-marca" aria-hidden="true">?!</span> Improvável</a>
+        <a class="btn btn-outline-light rounded-pill px-4" href="index.html">Produtos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero-loja text-white py-5">
+      <div class="container py-lg-4">
+        <span class="badge rounded-pill selo px-3 py-2 mb-3">Loja de invenções</span>
+        <h1 class="display-5 fw-bold col-lg-9">Coisas que ainda não existem, prontas para chegar na sua casa.</h1>
+        <p class="lead col-lg-8 mb-4">A Improvável vende invenções pequenas demais, grandes demais ou temporárias demais para o mundo real. Escolha a sua.</p>
+        <a class="btn btn-warning btn-lg rounded-pill px-4 fw-semibold" href="#titulo-produtos">Ver invenções</a>
+      </div>
+    </section>
+
+    <section class="container py-5" aria-labelledby="titulo-produtos">
+      <h2 id="titulo-produtos" class="fw-bold">Invenções em destaque</h2>
+      <p class="text-secondary">Cada produto cumpre uma regra do desafio: filtre para descobrir qual.</p>
+
+      <div class="row g-3 mb-4">
+        <div class="col-12 col-md-5">
+          <label for="filtroProduto" class="form-label small fw-semibold">Buscar produto</label>
+          <input id="filtroProduto" class="form-control" type="search" placeholder="Ex.: guarda-chuva" autocomplete="off">
+        </div>
+        <div class="col-6 col-md-4">
+          <label for="filtroRegra" class="form-label small fw-semibold">Regra do desafio</label>
+          <select id="filtroRegra" class="form-select"><option value="">Todas as regras</option></select>
+        </div>
+        <div class="col-6 col-md-3">
+          <label for="ordenarProdutos" class="form-label small fw-semibold">Ordenar por</label>
+          <select id="ordenarProdutos" class="form-select">
+            <option value="">Padrão</option>
+            <option value="nome">Nome (A–Z)</option>
+            <option value="menor-preco">Menor preço</option>
+            <option value="maior-preco">Maior preço</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row g-4" id="listaProdutos"></div>
+      <noscript><p class="alert alert-warning mt-3">Ative o JavaScript para ver o catálogo de produtos.</p></noscript>
+      <p id="mensagemFiltro" class="mt-4 text-secondary" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4 mt-5">
+    <div class="container">
+      <p class="mb-0 small">Improvável · Projeto educacional. Nenhum produto desta loja existe de verdade.</p>
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="js/produtos.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
